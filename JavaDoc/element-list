@@ -1,0 +1,16 @@
+it.unicam.cs.pa.jbudget100625
+it.unicam.cs.pa.jbudget100625.controller
+it.unicam.cs.pa.jbudget100625.controller.persistence
+it.unicam.cs.pa.jbudget100625.controller.persistence.account
+it.unicam.cs.pa.jbudget100625.controller.persistence.movement
+it.unicam.cs.pa.jbudget100625.controller.persistence.scheduledTransaction
+it.unicam.cs.pa.jbudget100625.controller.persistence.tag
+it.unicam.cs.pa.jbudget100625.controller.persistence.transaction
+it.unicam.cs.pa.jbudget100625.model.account
+it.unicam.cs.pa.jbudget100625.model.budget
+it.unicam.cs.pa.jbudget100625.model.ledger
+it.unicam.cs.pa.jbudget100625.model.movement
+it.unicam.cs.pa.jbudget100625.model.scheduledTransaction
+it.unicam.cs.pa.jbudget100625.model.tag
+it.unicam.cs.pa.jbudget100625.model.transaction
+it.unicam.cs.pa.jbudget100625.view

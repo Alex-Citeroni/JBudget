@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<!--
+  ~ /*
+  ~  * Copyright (c) 2019. [Acme Corp]
+  ~  *
+  ~  * Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~  * of this software and associated documentation files (the "Software"), to deal
+  ~  * in the Software without restriction, including without limitation the rights
+  ~  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~  * copies of the Software, and to permit persons to whom the Software is
+  ~  * furnished to do so, subject to the following conditions:
+  ~  *
+  ~  * The above copyright notice and this permission notice shall be included in
+  ~  * all copies or substantial portions of the Software.
+  ~  */
+  -->
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="267.0"
+      prefWidth="417.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="it.unicam.cs.pa.jbudget100625.view.AccountController">
+    <children>
+        <Button fx:id="addAccountButton" disable="true" layoutX="153.0" layoutY="228.0" mnemonicParsing="false"
+                onAction="#addAccount" text="➕ Aggiungi Account"/>
+        <TextField fx:id="accountNameTextField" layoutX="42.0" layoutY="72.0" onKeyReleased="#enableButton"
+                   promptText="Nome Account"/>
+        <TextField fx:id="accountDescriptionTextField" layoutX="227.0" layoutY="72.0" onKeyReleased="#enableButton"
+                   promptText="Descrizione Account"/>
+        <Spinner fx:id="openingBalanceSpinner" editable="true" layoutX="227.0" layoutY="153.0"/>
+        <Label layoutX="257.0" layoutY="126.0" text="Saldo d'apertura"/>
+        <ChoiceBox fx:id="accountTypeChoiceBox" layoutX="41.0" layoutY="153.0" prefWidth="150.0"/>
+        <Label fx:id="accountTypeLabel" layoutX="75.0" layoutY="126.0" text="Tipo di account"/>
+        <Label layoutX="154.0" layoutY="14.0" text="Nuovo Account">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+    </children>
+</Pane>

@@ -1,0 +1,21 @@
+{
+  "accounts": [
+    {
+      "id": -1173215856,
+      "accountType": "ASSETS",
+      "name": "Nome Account",
+      "description": "Descrizione Account",
+      "openingBalance": 0.0,
+      "movements": []
+    }
+  ],
+  "transactions": [],
+  "tags": [
+    {
+      "id": -1121573369,
+      "name": "Nome Tag",
+      "description": "Descrizione Tag"
+    }
+  ],
+  "scheduledTransactions": []
+}

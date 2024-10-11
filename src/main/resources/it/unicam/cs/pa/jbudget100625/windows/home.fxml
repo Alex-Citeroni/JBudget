@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ /*
+  ~  * Copyright (c) 2019. [Acme Corp]
+  ~  *
+  ~  * Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~  * of this software and associated documentation files (the "Software"), to deal
+  ~  * in the Software without restriction, including without limitation the rights
+  ~  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~  * copies of the Software, and to permit persons to whom the Software is
+  ~  * furnished to do so, subject to the following conditions:
+  ~  *
+  ~  * The above copyright notice and this permission notice shall be included in
+  ~  * all copies or substantial portions of the Software.
+  ~  */
+  -->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="402.0" prefWidth="849.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unicam.cs.pa.jbudget100625.view.HomeController">
+    <children>
+        <MenuBar fx:id="menuBar" layoutY="2.0" prefHeight="25.0" prefWidth="857.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="📂 File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#load" text="📤 Carica"/>
+                    </items>
+                    <SeparatorMenuItem mnemonicParsing="false"/>
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#save" text="💾 Salva"/>
+                    </items>
+                </Menu>
+            </menus>
+            <menus>
+                <Menu mnemonicParsing="false" text="👛 Account">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newAccount" text="➕ Nuovo"/>
+                    </items>
+                </Menu>
+            </menus>
+            <menus>
+                <Menu mnemonicParsing="false" text="📈 Budget">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#budget" text="📤 Apri"/>
+                    </items>
+                </Menu>
+            </menus>
+            <menus>
+                <Menu mnemonicParsing="false" text="📋 Tag">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newTag" text="📤 Apri"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="✘ Chiudi">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#close" text="✘ Chiudi l'applicazione"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TableView fx:id="accountInformationView" layoutX="14.0" layoutY="96.0" onMouseClicked="#click"
+                   prefHeight="200.0" prefWidth="536.0">
+            <columns>
+                <TableColumn fx:id="accountTypeColumn" prefWidth="89.0" text="Tipo"/>
+                <TableColumn fx:id="accountNameColumn" prefWidth="132.0" text="Nome"/>
+                <TableColumn fx:id="accountDescriptionColumn" prefWidth="208.0" text="Descrizione"/>
+                <TableColumn fx:id="accountBalanceColumn" prefWidth="106.0" text="Saldo"/>
+            </columns>
+        </TableView>
+        <TableView fx:id="movementInformationView" layoutX="559.0" layoutY="96.0" prefHeight="200.0" prefWidth="278.0">
+            <columns>
+                <TableColumn fx:id="movementTypeColumn" prefWidth="126.0" text="Tipo di movimento"/>
+                <TableColumn fx:id="movementDescriptionColumn" prefWidth="75.0" text="Descrizione"/>
+                <TableColumn fx:id="movementAmountColumn" prefWidth="75.0" text="Saldo"/>
+            </columns>
+        </TableView>
+        <Accordion/>
+        <Button fx:id="newTransaction" layoutX="559.0" layoutY="314.0" mnemonicParsing="false"
+                onAction="#addTransaction" text="➕ Nuova Transazione"/>
+        <Button fx:id="openAccount" disable="true" layoutX="225.0" layoutY="314.0" mnemonicParsing="false"
+                onAction="#getAccountMovements" text="📤 Apri Movimenti"/>
+        <Button fx:id="deleteButton" disable="true" layoutX="437.0" layoutY="314.0" mnemonicParsing="false"
+                onAction="#removeAccount" text="🗑 Elimina Account"/>
+        <Label layoutX="209.0" layoutY="27.0" text="Account">
+            <font>
+                <Font size="40.0"/>
+            </font>
+        </Label>
+        <Label layoutX="603.0" layoutY="27.0" text="Movimenti">
+            <font>
+                <Font size="40.0"/>
+            </font>
+        </Label>
+        <Button layoutX="14.0" layoutY="314.0" mnemonicParsing="false" onAction="#newAccount" text="➕ Nuovo Account"/>
+        <Button layoutX="778.0" layoutY="314.0" mnemonicParsing="false" onAction="#save" text="💾 Salva"/>
+    </children>
+</AnchorPane>

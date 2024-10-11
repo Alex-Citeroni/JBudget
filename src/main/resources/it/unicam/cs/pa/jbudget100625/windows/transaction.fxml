@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<!--
+  ~ /*
+  ~  * Copyright (c) 2019. [Acme Corp]
+  ~  *
+  ~  * Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~  * of this software and associated documentation files (the "Software"), to deal
+  ~  * in the Software without restriction, including without limitation the rights
+  ~  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~  * copies of the Software, and to permit persons to whom the Software is
+  ~  * furnished to do so, subject to the following conditions:
+  ~  *
+  ~  * The above copyright notice and this permission notice shall be included in
+  ~  * all copies or substantial portions of the Software.
+  ~  */
+  -->
+
+<AnchorPane prefHeight="514.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unicam.cs.pa.jbudget100625.view.TransactionController">
+    <children>
+        <Label layoutX="81.0" layoutY="27.0" text="Nuova Transazione">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tagView" layoutX="434.0" layoutY="102.0" onMouseClicked="#click" prefHeight="200.0" prefWidth="211.0">
+            <columns>
+                <TableColumn fx:id="nameTag" prefWidth="107.0" text="Nome" />
+                <TableColumn fx:id="descriptionTag" prefWidth="103.0" text="Descrizione" />
+            </columns>
+        </TableView>
+        <Label layoutX="524.0" layoutY="70.0" text="Tag">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="addTransaction" layoutX="214.0" layoutY="319.0" mnemonicParsing="false" onAction="#addTransaction" text="➕ Aggiungi Transazione" />
+        <TableView fx:id="movementView" layoutX="14.0" layoutY="100.0" onMouseClicked="#movementClick" prefHeight="200.0" prefWidth="344.0">
+            <columns>
+                <TableColumn fx:id="movementType" prefWidth="118.0" text="Tipo di Movimento" />
+                <TableColumn fx:id="movementDescription" prefWidth="75.0" text="Descrizione" />
+                <TableColumn fx:id="amount" prefWidth="75.0" text="Saldo" />
+                <TableColumn fx:id="account" prefWidth="75.0" text="Account" />
+            </columns>
+        </TableView>
+        <DatePicker fx:id="date" layoutX="454.0" layoutY="45.0" promptText="Data" />
+        <Label layoutX="139.0" layoutY="70.0" text="Movimenti">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button layoutX="540.0" layoutY="319.0" mnemonicParsing="false" onAction="#addTag" text="➕ Aggiungi Tag" />
+        <Label layoutX="481.0" layoutY="16.0" text="Data d'esecuzione">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+        <Button fx:id="deleteButton" disable="true" layoutX="434.0" layoutY="319.0" mnemonicParsing="false" onAction="#removeTag" text="🗑 Rimuovi Tag" />
+        <Button fx:id="removeMovement" disable="true" layoutX="17.0" layoutY="319.0" mnemonicParsing="false" onAction="#removeMovement" text="🗑 Rimuovi Movimento" />
+        <Label layoutX="415.0" layoutY="413.0" text="Nuovo Movimento">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="addMovementButton" disable="true" layoutX="427.0" layoutY="467.0" mnemonicParsing="false" onAction="#addMovement" text="➕ Aggiungi Movimento" />
+        <Label layoutX="229.0" layoutY="393.0" text="Tipo di Movimento" />
+        <Label layoutX="64.0" layoutY="393.0" text="Saldo" />
+        <Spinner fx:id="amountValue" editable="true" layoutX="13.0" layoutY="415.0" />
+        <ChoiceBox fx:id="movementTypeChoiceBox" layoutX="204.0" layoutY="415.0" prefWidth="150.0" />
+        <TextField fx:id="descriptionTextField" layoutX="13.0" layoutY="467.0" onKeyReleased="#enabledButton" promptText="Descrizione Movimento" />
+        <ChoiceBox fx:id="accountChoiceBox" layoutX="204.0" layoutY="467.0" prefWidth="150.0" />
+        <Label layoutX="231.0" layoutY="450.0" text="Seleziona Account" />
+        <Separator layoutY="360.0" prefHeight="0.0" prefWidth="661.0" />
+    </children>
+</AnchorPane>
